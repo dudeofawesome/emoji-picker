@@ -1,6 +1,6 @@
 {
   "name": "emoji-picker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Emoji picking NPM module",
   "main": "build/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "prepublish": "gulp build",
     "build": "gulp build"
   },
+  "typings": "./build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dudeofawesome/emoji-picker.git"

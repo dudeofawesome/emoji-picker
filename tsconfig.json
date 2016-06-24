@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "target": "ES6",
+        "target": "ES5",
         "module": "commonjs",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "declaration": true,
         "experimentalDecorators": true,
+        "preserveConstEnums": true,
         "sourceMap": true
     },
     "filesGlob": [
