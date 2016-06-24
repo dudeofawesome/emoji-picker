@@ -72,6 +72,7 @@ gulp.task('test', () => {
 
 gulp.task('set-dev', () => {
     process.env.DEVELOPMENT = true;
+    return;
 });
 
 gulp.task('build', (callback) => {
