@@ -14,4 +14,7 @@ console.log(`Emojis are so fun! ${EmojiPicker('happy')}`);
 ### Methods
 
 * `EmojiPicker(emotion: string, unicode: boolean = false): string`
-  Returns an emoji to represent the specified emotion.
+    * `emotion: string`:
+    * `unicode: boolean`:
+    Returns an emoji to represent the specified emotion.
+    If it can't find an emoji to represent the specified emotion, then it will return an empty string

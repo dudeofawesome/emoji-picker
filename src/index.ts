@@ -5,7 +5,17 @@ function random (max: number, min?: number): number {
     return Math.floor((Math.random() * (max - min)) + min);
 }
 
-export function EmojiPicker (expression: string, unicode: boolean = false) {
+export enum EmojiOptions {
+    sorry,
+    happy,
+    good,
+    music,
+    heart,
+    love,
+    surprise
+};
+
+export function EmojiPicker (expression: string, unicode: boolean = false): string {
     let choices: Array<string> = [];
     switch (expression) {
         case 'sorry': case 'sad':
@@ -30,6 +40,6 @@ export function EmojiPicker (expression: string, unicode: boolean = false) {
             choices = (!unicode) ? [':astonished:', ':open_mouth:', ':frowning:', ':anguished:'] : ['😲', '😮', '😦', '😧'];
             return choices[random(choices.length)];
         default:
-            return;
+            return '';
     }
 };
