@@ -1,11 +1,17 @@
-# castifi-hello-bot
-Hello, World bot
+# Emoji Picker
+Add more emoji to your life
 
-# Make sure you have your environment vars set!
+## Example
 
+```Javascript
+import {EmojiPicker} from 'emoji-picker';
+
+console.log(`Emojis are so fun! ${EmojiPicker('happy')}`);
 ```
-PAGE_TOKEN='???'
-VERIFY_TOKEN='???'
-PORT=???
-DEPLOY=true
-```
+
+## Usage
+
+### Methods
+
+* `EmojiPicker(emotion: string, unicode: boolean = false): string`
+  Returns an emoji to represent the specified emotion.
