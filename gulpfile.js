@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const chalk = require('chalk');
+const merge = require('merge2');
 
 let typescript;
 let tsProject;
@@ -17,9 +18,13 @@ gulp.task('build:typescript', () => {
         .pipe(sourcemaps.init())
         .pipe(typescript(tsProject));
 
-    return tsResult.js
-            .pipe(sourcemaps.write())
-            .pipe(gulp.dest('build'));
+    return merge([
+            tsResult.js
+                .pipe(sourcemaps.write())
+                .pipe(gulp.dest('build')),
+            tsResult.dts
+                .pipe(gulp.dest('build'))
+        ]);
 });
 
 var tsProjectTests;
